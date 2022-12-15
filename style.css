@@ -1,0 +1,498 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+
+}
+/* body{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #4daf54, #3d8888);
+    overflow: hidden;
+} */
+header{
+    width: 100%;
+    height: 30%;
+}
+
+
+/*----------menu-top---------*/
+.menu-top{
+    width: 100%;
+    height: 25%;
+    background-color: rgba(241, 234, 234, 0.897);
+    position: relative;
+    
+}
+.menu-top img{
+    position: absolute;
+    width: 3%;
+    height: 50%;
+    top: 5px;
+    left: 20px;
+}
+.menu-top .other{
+    position: absolute;
+    display: flex;
+    right: 10px;
+    
+}
+.menu-top .other .help{
+    
+    height: 25px;
+    
+    font-size: 20px;
+    list-style: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    position: relative;
+}
+.menu-top .other .help::after{
+    position: absolute;
+    content: "";
+    display: block;
+    width: 1px;
+    height: 100%;
+    background: black;
+    top: 10px;
+    transform: translateX(-15px);
+}
+.menu-top .other .help:first-child::after{
+    display: none;
+}
+
+.help .sub-menu{
+    z-index: 5;
+    
+    position: absolute;
+    list-style: none;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    margin-left: -160px;
+    margin-top: 20px;
+    width: 200px;
+    height: 300px;
+    visibility: hidden;
+    transition: 0.1s;
+}
+.help .sub-menu .h3{
+    font-size: 25px;
+    padding: 6px 0;
+    margin-left: 5px;
+    color: black;
+}
+.help .sub-menu li{
+    color: rgb(170, 170, 170);
+    font-size: 20px;
+    padding: 5px 0;
+    margin-left: 10px;
+}
+.help .sub-menu li:hover{
+    color: black;
+}
+.other .help:hover{
+    color:rgb(170, 170, 170) ;
+}
+.other .help:hover .sub-menu{
+    visibility: visible;
+}
+
+
+
+
+
+/*----------menu-middle---------*/
+
+.menu-middle{
+    position: relative;
+    width: 100%;
+    height: 30%;
+    background-color: white;
+    display: flex;
+    z-index: 5;
+
+}
+.menu-middle .logo img{
+    position: absolute;
+    width: 50px;
+    margin-top: 25px ;
+    margin-left: 35px;
+}
+
+.search-box{
+    position: relative;
+    right: 200px;
+    top: 10px;
+    background-color: rgba(0, 0, 0, 0.205);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: all 0.5 ease;
+    
+}
+.search-box_input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    color: black;
+    padding: 20px 70px 20px 20px;
+    font-size: 20px;
+    outline: none;
+    border: none;
+}
+.search-box_btn{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.search-box.open{
+    width: 300px;
+}
+.search-box{
+    position: absolute;
+
+}
+
+.menu-middle .gender{
+    position: absolute;
+    display: flex;
+    /* align-items: center; */
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width:30%;
+    z-index: 5;
+} 
+.menu-middle .gender .men, .women, .kids, .sale, .customise{
+    position: relative;
+   font-size: 20px;
+   height: 100%;
+   width: 50%;
+   text-align: center;
+   cursor: pointer;
+   padding: 20px 0;
+}
+.gender .men:hover{
+    border-bottom:3px solid black;
+}
+.gender .women:hover{
+    border-bottom: 3px solid black;
+}
+.gender .kids:hover{
+    border-bottom: 3px solid black;
+}
+.gender .sale:hover{
+    border-bottom: 3px solid black;
+}
+.gender .customise:hover{
+    border-bottom: 3px solid black;
+}
+.menu-middle.doimenu{
+    position: absolute;
+    position: fixed;
+    top: 0;
+    height: 10%;
+    background-color: rgba(0, 0, 0, 0.034);
+}
+
+/*------------sub-menu-men---------*/
+
+.menu-middle .gender .men .sub-menu-men{
+    position: absolute;
+    width: 1516px;
+    list-style: none;
+    display: flex;
+    top: 105%;
+    left: -530px;
+    background-color: white;
+    visibility: hidden;
+}
+.menu-middle .gender li{
+    z-index: 5;
+}
+.menu-middle .sub-menu-men .sub{
+    margin: 0 30px;
+    width: 400px;
+    text-align: left;
+}
+.menu-middle .sub-menu-men .sub .h4{
+    margin-top: 30px;
+    color: rgb(8, 8, 8);
+    font-size: 25px;
+
+}
+.menu-middle.sub-menu-men .sub li{
+    color: rgb(151, 160, 160);
+    margin-left: 20px;
+}
+.menu-middle .sub-menu-men .sub li:hover{
+    color: black;
+}
+.menu-middle .gender .men:hover .sub-menu-men{
+    visibility: visible;
+}
+/*------------sub-menu-women---------*/
+.menu-middle .gender .women{
+    position: relative;
+}
+.menu-middle .gender .women .sub-menu-women{
+    position: absolute;
+    width: 1516px;
+    list-style: none;
+    display: flex;
+    top: 105%;
+    left: -620px;
+    background-color: white;
+    visibility: hidden;
+    
+}
+.menu-middle .sub-menu-women .sub2{
+    margin: 0 30px;
+    width: 400px;
+    text-align: left;
+}
+.menu-middle .sub-menu-women .sub2 .h4{
+    margin-top: 30px;
+    color: rgb(8, 8, 8);
+    font-size: 25px;
+}
+.menu-middle .sub-menu-women .sub2 li{
+    color: rgb(151, 160, 160);
+    margin-left: 20px;
+}
+.menu-middle .sub-menu-women .sub2 li:hover{
+    color: black;
+}
+.menu-middle .gender .women:hover .sub-menu-women{
+    visibility: visible;
+}
+
+/*------------sub-menu-kids---------*/
+.menu-middle .gender .kids{
+    position: relative;
+}
+.menu-middle .gender .kids .sub-menu-kids{
+    position: absolute;
+    width: 1510px;
+    height: 400px;
+    list-style: none;
+    display: flex;
+    top: 105%;
+    left: -710px;
+    background-color: white;
+    visibility: hidden;
+    
+}
+.menu-middle .sub-menu-kids .sub3{
+    margin: 0 30px;
+    width: 400px;
+    text-align: left;
+}
+.menu-middle .sub-menu-kids .sub3 .h4{
+    margin-top: 30px;
+    color: rgb(8, 8, 8);
+    font-size: 25px;
+}
+.menu-middle .sub-menu-kids .sub3 li{
+    color: rgb(151, 160, 160);
+    margin-left: 20px;
+}
+.menu-middle .sub-menu-kids .sub3 li:hover{
+    color: black;
+}
+.menu-middle .gender .kids:hover .sub-menu-kids{
+    visibility: visible;
+}
+/*------------sub-menu-sale---------*/
+.menu-middle .gender .sale{
+    position: relative;
+}
+.menu-middle .gender .sale .sub-menu-sale{
+    position: absolute;
+    width: 1510px;
+    height: 200px;
+    list-style: none;
+    display: flex;
+    top: 105%;
+    left: -800px;
+    background-color: white;
+    visibility: hidden;
+    
+}
+.menu-middle .sub-menu-sale .sub4{
+    margin: 0 30px;
+    width: 400px;
+    text-align: left;
+}
+.menu-middle .sub-menu-sale .sub4 .h4{
+    margin-top: 30px;
+    color: rgb(8, 8, 8);
+    font-size: 25px;
+}
+.menu-middle .sub-menu-sale .sub4 li{
+    color: rgb(151, 160, 160);
+    margin-left: 20px;
+}
+.menu-middle .sub-menu-sale .sub4 li:hover{
+    color: black;
+}
+.menu-middle .gender .sale:hover .sub-menu-sale{
+    visibility: visible;
+}
+/*------------sub-menu-customise---------*/
+.menu-middle .gender .customise{
+    position: relative;
+}
+.menu-middle .gender .customise .sub-menu-customise{
+    position: absolute;
+    width: 1510px;
+    height: 200px;
+    list-style: none;
+    display: flex;
+    top: 105%;
+    left: -890px;
+    background-color: white;
+    visibility: hidden;
+}
+.menu-middle .sub-menu-customise .sub5{
+
+    margin: 0 30px;
+    width: 400px;
+    text-align: left;
+}
+.menu-middle .sub-menu-customise .sub5 .h4{
+    margin-top: 30px;
+    color: rgb(8, 8, 8);
+    font-size: 25px;
+}
+.menu-middle .sub-menu-customise .sub5 li{
+    color: rgb(151, 160, 160);
+    margin-left: 20px;
+}
+.menu-middle .sub-menu-customise .sub5 li:hover{
+    color: black;
+}
+.menu-middle .gender .customise:hover .sub-menu-customise{
+    visibility: visible;
+}
+/*----------menu-bot---------*/
+
+ .menu-bot{
+    width: 100%;
+    height: 13%;
+    background-color: rgba(241, 234, 234, 0.897);
+    display: flex;
+    position: absolute;
+    z-index: 1;
+}
+marquee{
+    border: 1px solid black;
+    height: 100%;
+}
+.menu-bot .random{
+    position: absolute;
+    display: flex;
+}
+.menu-bot .chaychu{
+    font-size: 35px;
+    list-style: none;
+    cursor: pointer;
+}
+.menu-bot .chaychu li{
+    font-size: 25px;
+    margin-left: -40px;
+    z-index: 1;
+}
+/*
+.card{
+    margin: 100px auto;
+    width: 320px;
+    height: 400px;
+    background: black;
+} */
+.nen-body {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+
+ .nen-body .nen1{
+    width: 50%;
+    height: 100%;
+    background-image: url(./img/nike1.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin-left: 40px;
+    margin-right: 5px;
+  
+}
+.nen1 .test1{
+    color: white;
+    margin-top: 550px;
+    margin-left: 50px;
+    font-size: 20px;
+    font-weight: bold;
+   
+}
+.nen1 .btn1{
+    color: rgb(36, 35, 35);
+    background: white;
+    border-radius: 20px;
+    font-size: 20px;
+    padding: 7px 5px;
+    text-align: center;
+    width: 80px;
+    height: 40px;
+    cursor: pointer;
+    margin-left: 50px;
+    margin-top: 40px;
+}
+.nen1 .btn1:hover{
+    background-color: gray;
+}
+.nen-body .nen2{
+    width: 50%;
+    height: 100%;
+    background-image: url(./img/nike2.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin-left: 5px;
+    margin-right: 40px;
+}
+.nen2 .test2{
+    color: rgb(0, 0, 0);
+    bottom: 100px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 550px;
+    margin-left: 50px;
+}
+.nen2 .btn2{
+    color: rgb(245, 244, 244);
+    background: rgb(8, 8, 8);
+    border-radius: 20px;
+    font-size: 20px;
+    padding: 7px 5px;
+    text-align: center;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    margin-left: 50px;
+    margin-top: 40px;
+}
+.nen2 .btn2:hover{
+    background-color: gray;
+}
